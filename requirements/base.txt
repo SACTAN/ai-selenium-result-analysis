@@ -1,0 +1,12 @@
+selenium>=4.0
+pytest
+python-json-logger
+langchain
+langchain-openai
+streamlit
+pandas
+json-log-formatter
+langchain==0.3.14
+langchain-community
+python-dotenv==1.0.1
+pytest-html

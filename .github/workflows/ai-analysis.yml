@@ -1,0 +1,39 @@
+name: AI Test Analysis
+on: [push]
+
+jobs:
+  test-and-analyze:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+        sudo apt-get install chromium-chromedriver
+        
+    - name: Run tests
+      run: |
+        pytest test_example.py --headless
+        
+    - name: AI Analysis
+      env:
+        OPENAI_API_KEY: "test"
+      run: |
+        python -c "from ai_analyzer import TestAnalyzer; \
+          result = TestAnalyzer('openai').analyze_logs(); \
+          print(result.content)" > analysis_report.md
+        
+    - name: Upload results
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-results
+        path: |
+          test_logs.json
+          analysis_report.md
+          screenshots/

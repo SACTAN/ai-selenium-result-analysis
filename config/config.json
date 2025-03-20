@@ -1,0 +1,6 @@
+{
+    "ai_provider": "groq",
+    "log_level": "DEBUG",
+    "browser": "chrome",      
+    "analysis_threshold": 0.7
+  }
