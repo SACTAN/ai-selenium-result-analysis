@@ -98,6 +98,8 @@ streamlit run dashboard/app.py
 
 ![image](https://github.com/user-attachments/assets/0566fe72-8a97-49aa-8353-27d6877fdd25)
 
+![image](https://github.com/user-attachments/assets/cd66b577-78e0-4e97-bc8c-a7d2b4e2d481)
+
 ---
 
 ## 📁 Project Structure
