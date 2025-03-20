@@ -105,20 +105,83 @@ streamlit run dashboard/app.py
 ## 📁 Project Structure
 
 ```
-ai-selenium-analytics/
-├── tests/                  # Selenium test cases
-├── ai_analysis/           # LLM integration
-│   ├── analyzer.py        # Analysis engine
-│   └── prompts/           # LLM templates
-├── dashboard/             # Streamlit UI
-│   └── app.py             # Dashboard core
-├── utilities/
-│   ├── logger.py          # JSON logging
-│   └── screenshot_utils.py# Capture/annotate screens
-├── infrastructure/
-│   ├── docker-compose.yml # Ollama/ELK stack
-│   └── selenium-grid/     # Distributed configs
-└── requirements.txt       # Dependencies
+Directory structure:
+└── ai-selenium-result-analysis/
+    ├── README.md
+    ├── Makefile
+    ├── pytest.ini
+    ├── requirements.txt
+    ├── setup.py
+    ├── ai_analysis/
+    │   ├── __init__.py
+    │   ├── analyzer.py
+    │   ├── groqsetuptest.py
+    │   ├── loganalysis.py
+    │   ├── __pycache__/
+    │   └── prompts/
+    │       ├── recommendations.j2
+    │       └── root_cause.j2
+    ├── config/
+    │   ├── config.ini
+    │   ├── config.json
+    │   └── logging_config.ini
+    ├── dashboard/
+    │   ├── __init__.py
+    │   ├── app.py
+    │   └── assets/
+    ├── docs/
+    │   ├── architecture.md
+    │   └── setup.md
+    ├── infrastructure/
+    │   ├── docker-compose.yml
+    │   └── selenium-grid/
+    │       └── hub-config.yml
+    ├── reports/
+    │   ├── __init__.py
+    │   ├── test-report.html
+    │   ├── ai_reports/
+    │   ├── assets/
+    │   ├── logs/
+    │   │   └── test_logs.json
+    │   └── screenshots/
+    ├── requirements/
+    │   ├── ai.txt
+    │   ├── base.txt
+    │   └── dev.txt
+    ├── tests_suite/
+    │   ├── __init__.py
+    │   ├── browser_factory.py
+    │   ├── conftest.py
+    │   ├── logger.py
+    │   ├── report_generator.py
+    │   ├── screenshot_utils.py
+    │   ├── test_demo.py
+    │   ├── test_login.py
+    │   ├── __pycache__/
+    │   ├── auth/
+    │   │   └── __pycache__/
+    │   ├── dashboard/
+    │   │   ├── __init__.py
+    │   │   ├── test_navigation.py
+    │   │   ├── test_widgets.py
+    │   │   └── __pycache__/
+    │   ├── page_objects/
+    │   │   ├── __init__.py
+    │   │   ├── dashboard_page.py
+    │   │   ├── login_page.py
+    │   │   └── __pycache__/
+    │   ├── reports/
+    │   │   ├── __init__.py
+    │   │   ├── test-report.html
+    │   │   └── assets/
+    │   └── utilities/
+    │       ├── __init__.py
+    │       ├── check_config.py
+    │       └── __pycache__/
+    └── .github/
+        └── workflows/
+            └── ai-analysis.yml
+
 ```
 
 ---
